@@ -27,15 +27,23 @@ public class Circulo  implements Comparable <Circulo>{
         this.coordx = x;
         this.coordy = y;
     }
+      
 
-    @Override
-     public int  compareTo(Circulo outro){
-        double dif = this.raio - outro.raio;
-     return (int) Math.round(dif);
+     @Override
+     public   int  compareTo(Circulo outro){
+        if (this.raio > outro.raio) {
+			return 1;
+		} else if (this.raio < outro.raio) {
+			return -1;
+		}
+
+		else {
+			return 0;
+		}
      }
     @Override
     public String toString(){
-    return "A coordenada x : " + this.coordx + "A coordenada y é : " + this.coordy + "O raio é : " +this.raio;
+    return "A coordenada x : " + this.coordx + " A coordenada y é : " + this.coordy + " O raio é : " +this.raio;
 
      
     

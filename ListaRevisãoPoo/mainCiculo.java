@@ -5,22 +5,39 @@ import java.util.Scanner;
 public class mainCiculo {
     public static void main(String[] args) {
         Scanner s = new Scanner (System.in);
-        double x,y,r;
-        System.out.println("Insira a coordenada x ");
-        x = s.nextDouble();
-        System.out.println("Insira a coordenada y ");
-        y = s.nextDouble();
-        System.out.println("Insira o raio ");
-        r = s.nextDouble();
+      Circulo c1,c2,c3;
+      System.out.println("insira x ");
+      double x = s.nextDouble();
+      System.out.println("insira y");
+      double y = s.nextDouble();
+      System.out.println("insira z");
+      double z  = s.nextDouble();
+      c1 = new Circulo(x, y, z);
+       System.out.println("insira x ");
+       x = s.nextDouble();
+      System.out.println("insira y");
+       y = s.nextDouble();
+      System.out.println("insira z");
+       z  = s.nextDouble();
+      c2 = new Circulo(x, y, z);
+       System.out.println("insira x ");
+       x = s.nextDouble();
+      System.out.println("insira y");
+       y = s.nextDouble();
+      System.out.println("insira z");
+       z  = s.nextDouble();
+      c3 = new Circulo(x, y, z);
 
-        Circulo c1 = new Circulo(x, y, r);
-        Circulo c2 = new Circulo(4.0, 2.0, 5.0);
 
-        double c = Circulo.Circuferencia(r );
-        double v = Circulo.volume(r);
-        double a  = Circulo.area(r);
+      ListaDeFiguras one = new ListaDeFiguras(3);
+      one.inserir(c1);
+      one.inserir(c2);
+      one.inserir(c3);
 
-     //fazer teste com vetor de objetos circulo e montar um program dinamico
+      one.bubblesort();
+
+      one.exibir();
+
      
 
 
