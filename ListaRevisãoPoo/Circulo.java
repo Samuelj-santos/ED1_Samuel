@@ -31,15 +31,10 @@ public class Circulo  implements Comparable <Circulo>{
 
      @Override
      public   int  compareTo(Circulo outro){
-        if (this.raio > outro.raio) {
-			return 1;
-		} else if (this.raio < outro.raio) {
-			return -1;
-		}
-
-		else {
-			return 0;
-		}
+       
+           double dif = this.raio - outro.raio;
+        return (int) Math.round(dif);
+        
      }
     @Override
     public String toString(){
