@@ -16,6 +16,10 @@ public class Pedido {
     public int getBoleto() {
         return boleto;
     }
+    @Override
+    public String toString(){
+        return "Seu pedido "  + this.descrição + " e boleto " + this.boleto;
+    }
 
    
 

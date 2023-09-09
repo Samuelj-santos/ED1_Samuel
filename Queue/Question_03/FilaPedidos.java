@@ -3,12 +3,14 @@ package Queue.Question_03;
 public class FilaPedidos {
     private Pedido[] dados;
     private Pedido head;
-    private Pedido qtd;
+    private Pedido qtdfull;
+   
     private int cont;
 
     public FilaPedidos(int tam){
         this.dados = new Pedido[tam];
-        this.qtd = this.dados[this.dados.length-1];
+        this.qtdfull = this.dados[this.dados.length-1];
+        
     }
 
     public void enQueue(Pedido one){
@@ -34,7 +36,7 @@ public class FilaPedidos {
     }
 
     public boolean isEmpty(){
-     if (this.qtd == null) {
+     if (this.head == null) {
         return true;
      }else{
         return false;
@@ -42,7 +44,8 @@ public class FilaPedidos {
 
     }
     public boolean isFull(){
-        if (this.qtd != null) {
+        
+        if (this.qtdfull != null) {
             return true;
         }else{
             return false;
