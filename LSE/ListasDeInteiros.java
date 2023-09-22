@@ -12,7 +12,7 @@ public class ListasDeInteiros {
                 case 1: 
                 System.out.print("Informe o valor a ser inserido: ");
             num = in.nextInt();
-            numeros.inserirNoInicio(num);
+            numeros.inserirNoInicioSemRepeticao(num);
             break;
             case 2:
              numeros.exibirTodos();
