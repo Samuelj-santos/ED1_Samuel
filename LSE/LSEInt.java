@@ -45,7 +45,7 @@ public class LSEInt {
               }
              }
 
-             public void procurarValor(Integer valor){
+             public int procurarValor(Integer valor){
                 LSENode aux;
                if (isEmpty() == true) {
                 System.out.println("A lista esta vazia");
@@ -58,7 +58,8 @@ public class LSEInt {
                     }
                     aux = aux.getProx();
                  }
-                 System.out.println("O valor " + valor+" apareceu " + cont+" vezes");
+                 return cont;
                }
+               return -1;
              }
             }
