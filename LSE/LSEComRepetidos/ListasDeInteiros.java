@@ -13,7 +13,7 @@ public class ListasDeInteiros {
                 case 1: 
                 System.out.print("Informe o valor a ser inserido: ");
             num = in.nextInt();
-            numeros.inserirNoInicio(num);
+            numeros.inserirNoInicioSemRepeticao(num);
             break;
             case 2:
              numeros.exibirTodos();
@@ -24,7 +24,8 @@ public class ListasDeInteiros {
             case 4:
             System.out.println("Insira o valor que deseja procurar");
             Integer valor = in.nextInt();
-            numeros.procurarValor(valor);
+           int a =  numeros.procurarValor(valor);
+           System.out.println("o valor " + valor + " apareceu " + a +"vezes");
             break;
             case 0: System.out.println("Bye bye");
             break;

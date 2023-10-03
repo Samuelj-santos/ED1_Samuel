@@ -22,15 +22,22 @@ public class LSEInt {
                 return false;
             }
         }
-            public void inserirNoInicio (Integer valor) {
-                LSENode novo;
+            public void inserirNoInicioSemRepeticao (Integer valor) {
+                LSENode novo,retorno;
                 novo = new LSENode (valor);
                 if (this.isEmpty() == true) {
 
                    this.primeiro = novo;
                   }else {
-                    novo.setProx(this.primeiro);
-                      this.primeiro = novo;
+                    retorno = this.procurar(valor);
+                    if (retorno == null) {
+                         novo.setProx(this.primeiro);
+                         this.primeiro = novo;
+                         System.out.println("inserção efetuada");
+                    }  else{
+                        System.out.println(" valor repetido . Inserção não efetuada");
+                    }
+                   
                  }
                  System.out.println("Inserção efetuada.");
                 
@@ -46,7 +53,7 @@ public class LSEInt {
               }
              }
 
-             public void procurarValor(Integer valor){
+             public int procurarValor(Integer valor){
                 LSENode aux;
                if (isEmpty() == true) {
                 System.out.println("A lista esta vazia");
@@ -59,7 +66,29 @@ public class LSEInt {
                     }
                     aux = aux.getProx();
                  }
-                 System.out.println("O valor " + valor+" apareceu " + cont+" vezes");
+                 return cont;
                }
+               return -1;
+             }
+
+             public LSENode procurar (int valor){
+
+                LSENode aux;
+
+                if (isEmpty() == true) {
+                    System.out.println("Lista vazia");
+
+                }else{
+
+                    aux = this.primeiro;
+                    while (aux != null) {
+                        if (aux.getInfo() == valor) {
+                            return aux;
+                        }
+                        aux = aux.getProx();
+                    }
+                }
+                return null;
+
              }
             }
