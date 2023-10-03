@@ -11,19 +11,22 @@ public class Main {
         one.inserirNoInicio(20);
         one.inserirNoInicio(30);
         one.inserirNoInicio(40);
-         one.exibirTodos();
+        // one.exibirTodos();
          System.out.println("separação");
         two.inserirNoInicio(10);
         two.inserirNoInicio(10);
         two.inserirNoInicio(10);
-        two.exibirTodos();
-
-        // copia = one.copiar();
-        // copia.exibirTodos();
-
-
-        soma.soma(one, two);
-        soma.exibirTodos();
+      //  two.exibirTodos();
+          
+         copia = one.copiar();
+       //  copia.exibirTodos();
+         copia.remover(20 );
+         copia.exibirTodos();
+         System.out.println();
+         one.exibirTodos();
+       
+        // soma.soma(one, two);
+        // soma.exibirTodos();
 
 
  
