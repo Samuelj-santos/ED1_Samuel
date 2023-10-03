@@ -1,3 +1,4 @@
+package LSEComRepetidos;
 public class LSEInt {
     private LSENode primeiro;
 

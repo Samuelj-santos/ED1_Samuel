@@ -1,3 +1,4 @@
+package LSEComRepetidos;
 import java.util.Scanner;
 public class ListasDeInteiros {
     public static void main(String[] args) {
