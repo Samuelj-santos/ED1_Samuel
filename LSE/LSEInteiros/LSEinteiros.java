@@ -118,46 +118,6 @@ else {
 }
    
         public LSEinteiros soma (LSEinteiros um,LSEinteiros dois){
-             LSEinteiros soma = new LSEinteiros();
-             LSENode aux1,aux2,aux3,novo;
-
-
-             aux1 = um.primeiro;
-             aux2 = dois.primeiro;
-             aux3 = soma.primeiro;
-              
-             
-                 novo = new LSENode(1);
-                aux3 = novo;
-                soma.primeiro = novo;
-             
-             while (aux3 != null) {
-                
-              if (aux1.getProx() != null  && aux2.getProx() != null) {
-                novo = new LSENode(aux1.getInfo() + aux2.getInfo());
-                aux3.setProx(novo);
-                aux3 = aux3.getProx();
-                 
-              }  if (aux1.getProx() != null && aux2.getProx() == null)   {
-               novo = new LSENode(aux2.getInfo());
-               aux3.setProx(novo);
-               aux3 = aux3.getProx();
-              } if(aux1.getProx() == null && aux2.getProx() != null){
-                novo = new LSENode(aux1.getInfo());
-                aux3.setProx(novo);
-                aux3 = aux3.getProx();
-              }else if(aux1.getProx() == null && aux2.getProx() == null){
-               break;
-              }else{
-                aux1 = aux1.getProx();
-                aux2 = aux2.getProx();
-                
-              }
-
-             }
-
-             
-
-            return soma ;
+           return null;
         }
 }
