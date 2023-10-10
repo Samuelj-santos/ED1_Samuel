@@ -1,6 +1,6 @@
 package Aluno;
 
-public class Aluno {
+public class Aluno  implements Comparable<Aluno> {
     private String matricula;
     private String nome;
     private double media;
@@ -42,13 +42,14 @@ public class Aluno {
         return "O aluno " + this.nome + " de matricula " + this.matricula + " de media " + this.media + " com o numero de faltas de : " + this.faltas;
      }
 
-   
-
-   
-
-   
-
-   
     
 
+    @Override
+    public int compareTo(Aluno o) {
+       if (this.matricula.equals(o.getMatricula())) {
+        return  0;
+       }else{
+        return  1;
+       }
+    }
 }

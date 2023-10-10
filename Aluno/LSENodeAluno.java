@@ -1,13 +1,17 @@
 package Aluno;
 
 public class LSENodeAluno {
-    private LSEAluno info;
+    private Aluno info;
     private LSENodeAluno prox;
 
-    public LSEAluno getInfo() {
+    public LSENodeAluno(Aluno o){
+        this.info = o;
+    }
+
+    public Aluno getInfo() {
         return this.info;
     }
-    public void setInfo(LSEAluno info) {
+    public void setInfo(Aluno info) {
         this.info = info;
     }
     public LSENodeAluno getProx() {
