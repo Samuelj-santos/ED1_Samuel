@@ -14,7 +14,7 @@ public class LDENode {
         this.prox = novoProx;
     }
     public void setAnt (LDENode novoAnt) {
-        this.prox = novoAnt;
+        this.ant = novoAnt;
     }
     public Integer getInfo() {
         return this.info;
