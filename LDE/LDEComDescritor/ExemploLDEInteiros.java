@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ExemploLDEInteiros {
     public static void main(String[] args) {
         Scanner in = new Scanner (System.in);
-        LDEInt numeros = new LDEInt();
+        LDEInteirosSemRepetidos numeros = new LDEInteirosSemRepetidos();
         int op, num;
         do {
             exibirMenu();
@@ -13,22 +13,29 @@ public class ExemploLDEInteiros {
                 case 1: 
                 System.out.print("Informe o valor: ");
                 num = in.nextInt();
-                numeros.inserirInicio(num);
+                numeros.inserirNoInicio(num);
                 break;
                 case 2: 
-                System.out.println("Em desenvolvimento!");
+                System.out.println("Informe o valor ");
+                num = in.nextInt();
+                numeros.inserirnoFinal(num);
                 break;
-                   case 3:
-                    System.out.println("Em desenvolvimento!");
+                   case 4:
+                    System.out.println("valor removido no inicio");
+                    numeros.removerNoInicio();
                     break;
-                     case 4:
-                      System.out.println("Em desenvolvimento!");
+                     case 5:
+                      System.out.println("valor removido no final");
+                      numeros.removerNoFinal();
                       break;
-                      case 5:
-                       System.out.println("Em desenvolvimento!");
+                      case 6:
+                       System.out.println("Informe o valor que deseja remover");
+                       num = in.nextInt();
+                       numeros.removerEspecifico(num);
                        break;
-                        case 6:
-                         System.out.println("Em desenvolvimento!");
+                        
+                         case 3:
+                         numeros.exibirTodos();
                          break;
                          case 0:
                           System.out.println("Fim de programa!");
