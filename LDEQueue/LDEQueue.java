@@ -4,6 +4,7 @@ public class LDEQueue {
     private LDENode primeiro;
     private LDENode ultimo;
     private int qtd;
+    
 
 
 
