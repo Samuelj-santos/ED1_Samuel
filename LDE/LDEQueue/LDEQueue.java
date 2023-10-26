@@ -1,4 +1,4 @@
-package LDEQueue;
+package LDE.LDEQueue;
 
 public class LDEQueue {
     private LDENode primeiro;
