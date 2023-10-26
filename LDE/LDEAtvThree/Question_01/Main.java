@@ -13,6 +13,7 @@ public class Main {
              lista .inserirnoFinal(5);
             
              lista.remover(2);
+            
              lista.exibirTodos();
     }
 }

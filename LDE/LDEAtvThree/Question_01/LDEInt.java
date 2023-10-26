@@ -55,24 +55,27 @@ public class LDEInt {
             System.out.println("Lista vazia ");
         }else{
             while (aux != null) {
+               
                 if (aux.getInfo() == valor) {
+                   
+                    
                     if (aux.getAnt() == null) {
                         this.primeiro = this.primeiro.getProx();
                         this.primeiro.setAnt(null);
                         this.qtd--;
-                        
+                        aux = aux.getProx();
                         
                      }
                     else if (aux.getProx() == null) {
                          aux.getAnt().setProx(null);
                          this.qtd--;
-                                                 
+                            aux = aux.getProx() ;                 
                      }else{
                          aux.getProx().setAnt(aux.getAnt());
                     aux.getAnt().setProx(aux.getProx());
-    
+                          
                     this.qtd--;
-                    
+                    aux = aux.getProx();
                      }
                    
                 }else{
