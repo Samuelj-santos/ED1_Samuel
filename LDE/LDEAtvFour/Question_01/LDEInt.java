@@ -14,7 +14,7 @@ public class LDEInt {
     }
 
     public void inserir(Integer valor){
-        LDENode aux , proximo;
+        LDENode aux , proximo,anterior;
         LDENode novo = new LDENode(valor);
 
         if (isEmpty() == true ) {
@@ -64,20 +64,19 @@ public class LDEInt {
              this.ultimo = novo;
 
         }else{
-         //ajeitar a inserção  no "meio" debuggar
+         
           aux = this.primeiro;
           while (aux != null) {
-            if (aux.getProx().getInfo() == valor ) {
-                aux = aux.getProx();
-            }else{
-                proximo = aux.getProx();
-                proximo.setAnt(novo);
-                aux.setProx(novo);
-                novo.setAnt(aux);
-                novo.setProx(proximo);
-                this.qtd++;
-                break;
-            }
+           if(aux.getInfo() == valor  ){
+              anterior = aux.getAnt();
+              anterior.setProx(novo);
+              novo.setAnt(anterior);
+              novo.setProx(aux);
+              aux.setAnt(novo);
+              break;
+           }else {
+            aux = aux.getProx();
+           }
           }
 
         }
