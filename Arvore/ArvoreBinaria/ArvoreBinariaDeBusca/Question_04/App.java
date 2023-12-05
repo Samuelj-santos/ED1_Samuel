@@ -16,6 +16,8 @@ public class App {
 
          Integer aux = (Integer) arvore.maiorNo().getInfo();
          Integer aux2 = (Integer) arvore.menorNo().getInfo();
-
+         Integer aux3c= (Integer)arvore.contadordeNos();
+         Integer aux4 = arvore.contadorFolhas();
+         Integer aux5 = arvore.contadorNoNaoTerminais();
  }   
 }

@@ -1,10 +1,9 @@
 package Arvore.ArvoreBinaria.ArvoreBinariaDeBusca.Question_02;
 
-
-
 public class Tree {
-    private TreeB<Integer> raiz;
 
+    private TreeB<Integer> raiz;
+     private int contador ;
     public boolean  isEmpty(){
         if (this.raiz == null) {
             return true ;
@@ -105,4 +104,73 @@ public class Tree {
 
         return null;
       }
+
+      public int contadordeNos(){
+        this.contador = 0;
+        if (this.isEmpty() == true) {
+            System.out.println("Arvore vazia ");
+        }else{
+          contador =   this.percorreremOrdem(raiz);
+        }
+        return contador;
+
+      }
+
+      private int  percorreremOrdem(TreeB r){
+        
+         if (r != null) {
+            percorreremOrdem(r.getLeft());
+            this.contador++;
+            percorreremOrdem(r.getRight());
+         }
+         return this.contador;
+      }
+
+
+      public int contadorNoNaoTerminais(){
+          this.contador = 0;
+          if (this.isEmpty() == true ) {
+            System.out.println(" Arvore vazia ");
+          }else{
+            this.contador = this.percorrer(raiz);
+          }
+          return this.contador;
+      }
+
+      private int percorrer(TreeB r){
+        if (r!=null) {
+            percorrer(r.getLeft());
+            if (r.getLeft() != null || r.getRight() != null) {
+                this.contador++;
+            }
+            percorrer(r.getRight());
+        }
+        return this.contador;
+
+      }
+
+        public int contadorFolhas(){
+          this.contador = 0;
+          if (this.isEmpty() == true ) {
+            System.out.println(" Arvore vazia ");
+          }else{
+            this.contador = this.percorrerFolhas(raiz);
+          }
+          return this.contador;
+      }
+
+      private int percorrerFolhas(TreeB r){
+        if (r!=null) {
+            percorrerFolhas(r.getLeft());
+            if (r.getLeft() == null && r.getRight() == null) {
+                this.contador++;
+            }
+            percorrerFolhas(r.getRight());
+        }
+        return this.contador;
+
+      }
+
+
+      
 }
